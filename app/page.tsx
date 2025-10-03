@@ -1,0 +1,132 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCheck, CheckCircle, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+export default function Home() {
+  const benefits = [
+    {
+      title: "Boost Your Confidence",
+      desc: "Overcome nervousness and speak with clarity during interviews.",
+    },
+    {
+      title: "Mock Interviews",
+      desc: "Practice real interview scenarios and receive expert feedback.",
+    },
+    {
+      title: "Behavioural Skills",
+      desc: "Improve communication, teamwork, and professional body language.",
+    },
+    {
+      title: "Resume & HR Prep",
+      desc: "Craft strong resumes and prepare for common HR questions.",
+    },
+    {
+      title: "Personalized Feedback",
+      desc: "Identify your strengths and improve weak areas with detailed guidance.",
+    },
+    {
+      title: "Proven Results",
+      desc: "Thousands of students placed successfully in top companies.",
+    },
+  ];
+  return (
+    <div className="font-sans">
+      <div className="md:h-40 md:w-40 md:-top-[0%] md:-left-[0%]  bg-green-600 absolute -z-20 rounded-full blur-[100px]"></div>
+      <header className="h-16 w-[90%] md:w-[80%] mx-auto flex flex-row items-center">
+        <span className="font-bold tracking-wider">The skill web | <span className="font-medium">Unlock your potential</span></span>
+      </header>
+      <main className="w-[90%] md:w-[80%] mx-auto my-10">
+        <section className="flex flex-col gap-[32px] justify-between items-center md:flex-row h-full">
+          <div className="md:w-1/2">
+            <h2 className="tracking-widest text-sm font-semibold bg-yellow-400 inline px-2.5 rounded-xs">
+              ✨ INTERVIEW MADE EASY
+            </h2>
+            <h1 className="text-4xl font-medium mb-3.5 md:text-6xl">
+              Crack your next interview with confidence
+            </h1>
+            <h3 className=" text-gray-600 text-sm leading-relaxed font-medium">
+              We offers
+            </h3>
+            <div className="flex flex-col items-strt mb-3.5">
+              <p className="flex items-center gap-2 text-gray-600 text-sm leading-relaxed p-0.5 rounded">
+                <CheckCircle2 className="text-green-500 w-5 h-5" />
+                <span>Personalized guidance from human not AI.</span>
+              </p>
+              <p className="flex items-center gap-2 text-gray-600 text-sm leading-relaxed p-0.5 rounded">
+                <CheckCircle2 className="text-green-500 w-5 h-5" />
+                <span>Better interactive learning environment.</span>
+              </p>
+              <p className="flex items-center gap-2 text-gray-600 text-sm leading-relaxed p-0.5 rounded">
+                <CheckCircle2 className="text-green-500 w-5 h-5" />
+                <span>Resume & HR Prep and many more.</span>
+              </p>
+            </div>
+            <div className="flex flex-row gap-4">
+              <Button className="bg-yellow-900 rounded-sm hover:bg-yellow-700 cursor-pointer">
+                Get started
+              </Button>
+              <Button
+                variant="link"
+                className=" rounded-sm text-yellow-600 cursor-pointer"
+              >
+                Book a demo
+              </Button>
+            </div>
+          </div>
+
+          <Image
+            className="bg-yellow-200 rounded-full p-2"
+            src="/raising-hand-bro-green.svg"
+            alt="Next.js logo"
+            width={300}
+            height={38}
+            priority
+          />
+        </section>
+        <section className="mt-10">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-10">
+            {benefits.map((benefit, index) => (
+              <Card
+                key={benefit.title}
+                className="shadow-none rounded-sm border-amber-500 hover:bg-amber-500 hover:text-white"
+              >
+                <CardContent className="flex flex-col items-start p-6">
+                  <h3 className="font-semibold text-lg mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {benefit.desc}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="pt-10">
+            <h2 className="bg-yellow-300 rounded-sm inline p-3 font-medium">
+              The important skills
+            </h2>
+            <Card className="rounded-sm shadow-none bg-yellow-300">
+              <CardContent className="">
+                Learn what you haven't learned yet despite spending lakhs every
+                year! <strong>The Comunication Skill</strong>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="pt-5">
+            <h2 className="bg-yellow-300 rounded-sm inline  p-3 font-medium mb-2">
+              Interview redirect
+            </h2>
+            <Card className="rounded-sm shadow-none bg-yellow-300">
+              <CardContent className="">
+                Take control of the<strong> discussion</strong>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+      </main>
+
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
+    </div>
+  );
+}
