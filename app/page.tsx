@@ -33,16 +33,22 @@ export default function Home() {
     <div className="font-sans">
       <div className="md:h-40 md:w-40 md:-top-[0%] md:-left-[0%]  bg-green-600 absolute -z-20 rounded-full blur-[100px]"></div>
       <header className="h-16 w-[90%] md:w-[80%] mx-auto flex flex-row items-center">
-        <span className="font-bold tracking-wider">The skill web | <span className="font-medium">Unlock your potential</span></span>
+        <span className="font-bold tracking-wider">
+          The skill web |{" "}
+          <span className="font-medium">Unlock your potential</span>
+        </span>
       </header>
       <main className="w-[90%] md:w-[80%] mx-auto my-10">
         <section className="flex flex-col gap-[32px] justify-between items-center md:flex-row h-full">
           <div className="md:w-1/2">
-            <h2 className="tracking-widest text-sm font-semibold bg-yellow-400 inline px-2.5 rounded-xs">
-              ✨ INTERVIEW MADE EASY
-            </h2>
+            <span>
+              ✨
+              <h2 className="tracking-widest text-sm font-semibold bg-yellow-400 inline px-2.5 rounded-xs">
+                INTERVIEW MADE EASY
+              </h2>
+            </span>
             <h1 className="text-4xl font-medium mb-3.5 md:text-6xl">
-              Crack your next interview with confidence
+              Crack your next interview with confidence.
             </h1>
             <h3 className=" text-gray-600 text-sm leading-relaxed font-medium">
               We offers
@@ -74,17 +80,34 @@ export default function Home() {
             </div>
           </div>
 
-          <Image
-            className="bg-yellow-200 rounded-full p-2"
-            src="/raising-hand-bro-green.svg"
-            alt="Next.js logo"
-            width={300}
-            height={38}
-            priority
-          />
+          <div className="relative">
+            <div className="absolute top-10">
+                <Card className="rounded-sm shadow-none border-amber-300 p-2 font-medium font-mono">
+                  <CardContent>HR Prep</CardContent>
+                </Card>
+                
+            </div>
+            <div className="absolute right-0 top-30">
+              <Card className="rounded-sm shadow-none border border-amber-300 py-2 font-medium font-mono">
+                  <CardContent>⭐⭐⭐⭐</CardContent>
+                </Card>
+            </div>
+            <div className="absolute left-20 bottom-0">
+              <Card className="rounded-sm shadow-none border border-amber-300 py-2 font-medium font-mono">
+                  <CardContent>Resume</CardContent>
+                </Card>
+            </div>
+            <Image
+              className="bg-yellow-200 rounded-full p-2 w-[350px]  md:w-[430px] "
+              src="/raising-hand-bro-green.svg"
+              alt="Hero image"
+              width={430}
+              height={38}
+              priority
+            />
+          </div>
         </section>
         <section className="mt-10">
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-10">
             {benefits.map((benefit, index) => (
               <Card
