@@ -29,9 +29,10 @@ export default function Home() {
       desc: "Thousands of students placed successfully in top companies.",
     },
   ];
+  const points = ["Personalized guidance from human not AI.","Better interactive learning environment.","Resume & HR Prep and many more."]
   return (
-    <div className="font-sans">
-      <div className="md:h-40 md:w-40 md:-top-[0%] md:-left-[0%]  bg-green-600 absolute -z-20 rounded-full blur-[100px]"></div>
+    <div className="font-sans text-foreground">
+      <div className="md:h-40 md:w-40 md:-top-[0%] md:-left-[0%] bg-purple-600 absolute -z-20 rounded-full blur-[100px]"></div>
       <header className="h-16 w-[90%] md:w-[80%] mx-auto flex flex-row items-center">
         <span className="font-bold tracking-wider">
           The skill web |{" "}
@@ -43,37 +44,32 @@ export default function Home() {
           <div className="md:w-1/2">
             <span>
               ✨
-              <h2 className="tracking-widest text-sm font-semibold bg-yellow-400 inline px-2.5 rounded-xs">
+              <h2 className="tracking-widest text-sm font-semibold bg-primary text-primary-foreground inline px-2.5 rounded-xs">
                 INTERVIEW MADE EASY
               </h2>
             </span>
             <h1 className="text-4xl font-medium mb-3.5 md:text-6xl">
               Crack your next interview with confidence.
             </h1>
-            <h3 className=" text-gray-600 text-sm leading-relaxed font-medium">
+            <h3 className="text-sm leading-relaxed font-medium text-secondary-foreground/60">
               We offers
             </h3>
             <div className="flex flex-col items-strt mb-3.5">
-              <p className="flex items-center gap-2 text-gray-600 text-sm leading-relaxed p-0.5 rounded">
+              {points.map(point=>(
+              <p key={point} className="flex items-center gap-2 text-secondary-foreground/60 text-sm leading-relaxed p-0.5 rounded">
                 <CheckCircle2 className="text-green-500 w-5 h-5" />
-                <span>Personalized guidance from human not AI.</span>
+                <span>{point}</span>
               </p>
-              <p className="flex items-center gap-2 text-gray-600 text-sm leading-relaxed p-0.5 rounded">
-                <CheckCircle2 className="text-green-500 w-5 h-5" />
-                <span>Better interactive learning environment.</span>
-              </p>
-              <p className="flex items-center gap-2 text-gray-600 text-sm leading-relaxed p-0.5 rounded">
-                <CheckCircle2 className="text-green-500 w-5 h-5" />
-                <span>Resume & HR Prep and many more.</span>
-              </p>
+              ))}
+              
             </div>
             <div className="flex flex-row gap-4">
-              <Button className="bg-yellow-900 rounded-sm hover:bg-yellow-700 cursor-pointer">
+              <Button variant="default" className="rounded-sm cursor-pointer text-foreground">
                 Get started
               </Button>
               <Button
                 variant="link"
-                className=" rounded-sm text-yellow-600 cursor-pointer"
+                className="rounded-sm cursor-pointer text-foreground"
               >
                 Book a demo
               </Button>
@@ -82,29 +78,37 @@ export default function Home() {
 
           <div className="relative">
             <div className="absolute top-10">
-                <Card className="rounded-sm shadow-none border-amber-300 p-2 font-medium font-mono">
-                  <CardContent>HR Prep</CardContent>
-                </Card>
-                
+              <Card className="rounded-sm shadow-none border-amber-300 p-2 font-medium font-mono">
+                <CardContent>HR Prep</CardContent>
+              </Card>
             </div>
             <div className="absolute right-0 top-30">
               <Card className="rounded-sm shadow-none border border-amber-300 py-2 font-medium font-mono">
-                  <CardContent>⭐⭐⭐⭐</CardContent>
-                </Card>
+                <CardContent>⭐⭐⭐⭐</CardContent>
+              </Card>
             </div>
             <div className="absolute left-20 bottom-0">
               <Card className="rounded-sm shadow-none border border-amber-300 py-2 font-medium font-mono">
-                  <CardContent>Resume</CardContent>
-                </Card>
+                <CardContent>Resume</CardContent>
+              </Card>
             </div>
             <Image
-              className="bg-yellow-200 rounded-full p-2 w-[350px]  md:w-[430px] "
-              src="/raising-hand-bro-green.svg"
+              className="bg-primary/70 rounded-full p-2 w-[350px]  md:w-[430px] "
+              src="/interview-rafiki.svg"
               alt="Hero image"
               width={430}
               height={38}
               priority
             />
+          </div>
+        </section>
+        <section className="mt-10 mb-10">
+          <div className="grid grid-cols-5 grid-rows-5 gap-5 h-lvh">
+            <div className="col-span-2 row-span-2 bg-amber-400">1</div>
+            <div className="col-span-2 row-span-4 col-start-3 bg-green-400">2</div>
+            <div className="row-span-4 col-start-5 bg-purple-500">3</div>
+            <div className="col-span-2 row-span-3 row-start-3 bg-cyan-500">4</div>
+            <div className="col-span-3 col-start-3 row-start-5 bg-red-500">5</div>
           </div>
         </section>
         <section className="mt-10">
