@@ -94,7 +94,7 @@ export default function Home() {
             </div>
             <Image
               className="bg-primary/70 rounded-full p-2 w-[350px]  md:w-[430px] "
-              src="/interview-rafiki.svg"
+              src="/interview-hero-image.svg"
               alt="Hero image"
               width={430}
               height={38}
