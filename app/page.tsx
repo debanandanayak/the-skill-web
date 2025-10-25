@@ -4,6 +4,7 @@ import CompanyShowcase from "@/components/company-showcase";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import { Highlighter } from "@/components/ui/highlighter";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 export default function Home() {
   const benefits = [
     {
@@ -50,7 +51,7 @@ export default function Home() {
           <div className="md:w-1/2">
             <span>
               ✨
-              <h2 className="tracking-widest text-sm font-semibold bg-primary text-primary-foreground inline px-2.5 rounded-xs">
+              <h2 className="tracking-widest text-sm font-semibold bg-primary text-primary-foreground dark:text-secondary-foreground inline px-2.5 rounded-xs">
                 INTERVIEW MADE EASY
               </h2>
             </span>
@@ -185,7 +186,8 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center h-60 bg-black text-white/70">
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center h-60 text-secondary-foreground/80 text-sm">
+        <AnimatedThemeToggler />{" "}
         <h1>© 2025 The skill web, Inc. All rights reserved. </h1>
       </footer>
     </div>

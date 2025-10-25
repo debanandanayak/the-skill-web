@@ -21,7 +21,7 @@ export default function CompanyShowcase() {
             {companies.map((name, i) => (
               <div
                 key={`${i}-${name}`}
-                className="p-10 bg-primary rounded-sm min-w-[200px]"
+                className="p-10 bg-secondary rounded-sm min-w-[200px]"
               >
                 {name}
               </div>
@@ -31,7 +31,7 @@ export default function CompanyShowcase() {
       </div>
       <div className="hidden md:grid [grid-template-columns:repeat(4,1fr)] gap-x-5 gap-y-10">
         {companies.map((name) => (
-          <div key={`random  ${name}`} className="p-10 bg-primary rounded-sm">
+          <div key={`random  ${name}`} className="p-10 bg-secondary rounded-sm">
             {name}
           </div>
         ))}
