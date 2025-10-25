@@ -1,8 +1,9 @@
-import CompanyShowcase from "@/components/compny-showcase";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCheck, CheckCircle, CheckCircle2 } from "lucide-react";
+import CompanyShowcase from "@/components/company-showcase";
+import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import { Highlighter } from "@/components/ui/highlighter";
 export default function Home() {
   const benefits = [
     {
@@ -53,8 +54,12 @@ export default function Home() {
                 INTERVIEW MADE EASY
               </h2>
             </span>
-            <h1 className="text-4xl font-medium mb-3.5 md:text-6xl">
-              Crack your next interview with confidence.
+            <h1 className="text-4xl font-medium mb-3.5 md:text-6xl lg:leading-20">
+              Crack your next{" "}
+              <Highlighter action="underline" color="blue">
+                interview
+              </Highlighter>{" "}
+              with confidence .
             </h1>
             <h3 className="text-sm leading-relaxed font-medium text-secondary-foreground/60">
               We offers
@@ -129,19 +134,18 @@ export default function Home() {
         <section className="py-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end auto-cols-fr">
             <div className="lg:col-span-6 text-5xl font-semibold">
-              Cohorts for better learning.
+              Equipping students for real-world impact
             </div>
             <div className="lg:col-span-6 lg:col-start-7 text-secondary-foreground/60">
-              Linear is shaped by the practices and principles that distinguish
-              world-class product teams from the rest: relentless focus, fast
-              execution, and a commitment to the quality of craft. Make the
-              switch
+              Our programs bridge the gap between academics and real-world
+              skills, preparing students to think critically, build confidently,
+              and perform at industry standards from day one.
             </div>
           </div>
         </section>
         <section className="mt-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-10">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit) => (
               <Card
                 key={benefit.title}
                 className="shadow-none rounded-sm border-amber-500 hover:bg-amber-500 hover:text-white"
