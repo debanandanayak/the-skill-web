@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import CompanyShowcase from "@/components/company-showcase";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
@@ -46,7 +46,7 @@ export default function Home() {
           <span className="font-medium">Unlock your potential</span>
         </span>
       </header>
-      <main className="w-[90%] md:w-[80%] mx-auto my-10">
+      <main className="w-[90%] md:w-[80%] my-10 mx-auto">
         <section className="flex flex-col gap-[32px] justify-between items-center md:flex-row h-full">
           <div className="md:w-1/2">
             <span>
@@ -118,74 +118,59 @@ export default function Home() {
             />
           </div>
         </section>
-
-        <section className="py-16">
-          <div className="text-center">
-            <p className="text-secondary-foreground/60 text-center inline md:block md:text-2xl md:font-bold md:text-secondary-foreground after:content-['_'] md:after:content-none">
-              Powering organizations to produce next-gen talents.
-            </p>
-            <p className="text-center text-secondary-foreground/60 inline md:block">
-              From individuals to institutes and corporates.
-            </p>
-          </div>
-          <div className="mt-5">
-            <CompanyShowcase />
-          </div>
-        </section>
-        <section className="py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end auto-cols-fr">
-            <div className="lg:col-span-6 text-5xl font-semibold">
-              Equipping students for real-world impact
-            </div>
-            <div className="lg:col-span-6 lg:col-start-7 text-secondary-foreground/60">
-              Our programs bridge the gap between academics and real-world
-              skills, preparing students to think critically, build confidently,
-              and perform at industry standards from day one.
-            </div>
-          </div>
-        </section>
-        <section className="mt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-10">
-            {benefits.map((benefit) => (
-              <Card
-                key={benefit.title}
-                className="shadow-none rounded-sm border-amber-500 hover:bg-amber-500 hover:text-white"
-              >
-                <CardContent className="flex flex-col items-start p-6">
-                  <h3 className="font-semibold text-lg mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {benefit.desc}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="pt-10">
-            <h2 className="bg-yellow-300 rounded-sm inline p-3 font-medium">
-              The important skills
-            </h2>
-            <Card className="rounded-sm shadow-none bg-yellow-300">
-              <CardContent className="">
-                Learn what you haven't learned yet despite spending lakhs every
-                year! <strong>The Comunication Skill</strong>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="pt-5">
-            <h2 className="bg-yellow-300 rounded-sm inline  p-3 font-medium mb-2">
-              Interview redirect
-            </h2>
-            <Card className="rounded-sm shadow-none bg-yellow-300">
-              <CardContent className="">
-                Take control of the<strong> discussion</strong>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
       </main>
-
+      <section className="py-16 md:mx-30">
+        <div className="text-center">
+          <p className="text-secondary-foreground/60 text-center inline md:block md:text-2xl md:font-bold md:text-secondary-foreground after:content-['_'] md:after:content-none">
+            Powering organizations to produce next-gen talents.
+          </p>
+          <p className="text-center text-secondary-foreground/60 inline md:block">
+            From individuals to institutes and corporates.
+          </p>
+        </div>
+        <div className="mt-5">
+          <CompanyShowcase />
+        </div>
+      </section>
+      <section className="py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end auto-cols-fr mx-10 md:mx-30">
+          <div className="lg:col-span-6 text-5xl font-semibold text-balance">
+            Equipping students for real-world
+          </div>
+          <div className="lg:col-span-6 lg:col-start-7 text-secondary-foreground/60">
+            Our programs bridge the gap between academics and real-world skills,
+            preparing students to think critically, build confidently, and
+            perform at industry standards from day one.
+          </div>
+        </div>
+        <div className="mt-10"></div>
+        <div className="snap-x overscroll-x-contain snap-always overflow-x-scroll overflow-y-hidden [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+          <div className="grid gap-4 grid-flow-col min-w-fit justify-center items-center">
+            <Card className="aspect-[320/380] h-85 ml-8  slide-out-to-right-85 snap-center rounded-sm ">
+              <CardTitle className="px-10 mt-5 text-xl">
+                Behavioural Skills
+              </CardTitle>
+              <CardContent className="p-10">
+                Improve communication, teamwork, and professional body language.
+              </CardContent>
+            </Card>
+            <Card className="aspect-[320/380] h-85 slide-out-to-right-90 snap-center rounded-sm">
+              <CardTitle className="px-10 mt-5 text-xl">
+                Technical Skills
+              </CardTitle>
+              <CardContent className="p-10">
+                Develop coding, problem-solving, and analytical skills.
+              </CardContent>
+            </Card>
+            <Card className="aspect-[320/380] h-85 mr-8 slide-out-to-right-90 snap-center rounded-sm">
+              <CardTitle className="px-10 mt-5 text-xl">Soft Skills</CardTitle>
+              <CardContent className="p-10">
+                Enhance adaptability, leadership, and time management skills.
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center h-60 text-secondary-foreground/80 text-sm">
         <AnimatedThemeToggler />{" "}
         <h1>© 2025 The skill web, Inc. All rights reserved. </h1>
